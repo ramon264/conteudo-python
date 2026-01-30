@@ -1,4 +1,4 @@
-   <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -13,62 +13,38 @@
 
 <nav>
     <button onclick="mostrarAba('cadastro')">Cadastrar-se</button>
-    <button onclick="mostrarAba('login')">Tenho uma conta</button>
-    <button onclick="mostrarAba('fila')">Fila de Espera</button>
+    <button onclick="mostrarAba('login')">Login</button>
     <button onclick="mostrarAba('cadastrados')">Cadastrados</button>
 </nav>
 
 <div class="container">
 
-    <!-- CADASTRO -->
     <div id="cadastro" class="aba active">
         <h2>Cadastrar-se</h2>
-
-        <input type="text" id="nome" placeholder="Nome">
-        <input type="email" id="email" placeholder="Email">
-        <input type="password" id="senha" placeholder="Senha">
-
+        <input type="text" id="cadUser" placeholder="Usuário">
+        <input type="password" id="cadPass" placeholder="Senha">
         <button onclick="cadastrar()">Cadastrar</button>
+        <p id="cadMsg"></p>
     </div>
 
-    <!-- LOGIN -->
     <div id="login" class="aba">
         <h2>Login</h2>
-
         <form onsubmit="logar(event)">
-            <input type="email" id="loginEmail" placeholder="Email" required>
-            <input type="password" id="loginSenha" placeholder="Senha" required>
+            <input type="text" id="usuario" placeholder="Usuário">
+            <input type="password" id="senha" placeholder="Senha">
             <button type="submit">Entrar</button>
         </form>
-
-        <p>
-            <a href="#" onclick="mostrarAba('esqueci')">Esqueci minha senha</a>
-        </p>
-
-        <div id="mensagemErro" class="erro"></div>
+        <p id="loginMsg"></p>
     </div>
 
-    <div id="esqueci" class="aba">
-        <h2>Esqueci minha senha</h2>
-        <input type="email" placeholder="Digite seu email">
-        <button>Recuperar senha</button>
-        <p>(Simulação)</p>
-    </div>
 
-    <!-- FILA DE ESPERA -->
-    <div id="fila" class="aba">
-        <h2>Fila de Espera</h2>
-        <ul id="listaFila"></ul>
-    </div>
-
-    <!-- CADASTRADOS -->
     <div id="cadastrados" class="aba">
         <h2>Usuários Cadastrados</h2>
-        <ul id="listaCadastrados"></ul>
-    </div>
+        <ul id="listaUsuarios"></ul>
 
-</div>
-
-<script src="script.js"></script>
-</body>
-</html>
+        <div id="editarBox">
+            <h3>Editar Usuário</h3>
+            <input type="text" id="editUser" placeholder="Usuário">
+            <input type="password" id="editPass" placeholder="Senha">
+            <button onclick="salvarEdicao()">Salvar</button>
+            <p id="edit"

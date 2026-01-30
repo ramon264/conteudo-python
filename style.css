@@ -1,83 +1,130 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-header {
-    background: #2c3e50;
-    color: white;
-    padding: 15px;
-    text-align: center;
-}
-
-nav {
-    background: #34495e;
-    padding: 10px;
+body {
+    background-color: #0b0f1a;
+    color: #ffffff;
     display: flex;
     justify-content: center;
-    gap: 10px;
-}
-
-nav button {
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-nav button:hover {
-    background: #bdc3c7;
+    align-items: center;
+    height: 100vh;
 }
 
 .container {
-    padding: 20px;
+    background-color: #050814;
+    width: 360px;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #1e2a5a;
+    box-shadow: 0 0 20px rgba(0, 120, 255, 0.15);
 }
 
-.aba {
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    color: #6fa8ff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.tabs button:hover {
+    background-color: rgba(0, 120, 255, 0.15);
+}
+
+.tabs button.active {
+    background-color: #0a5cff;
+    color: #ffffff;
+    border-radius: 6px;
+}
+
+.tab {
     display: none;
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.aba.active {
-    display: block;
 }
 
 input {
     width: 100%;
-    padding: 8px;
-    margin: 8px 0;
+    padding: 10px;
+    margin-bottom: 12px;
+    background-color: #0b1025;
+    border: 1px solid #1e2a5a;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+input::placeholder {
+    color: #6fa8ff;
 }
 
 button {
     width: 100%;
     padding: 10px;
-    background: #2ecc71;
-    color: white;
+    background-color: #0a5cff;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 button:hover {
-    background: #27ae60;
+    background-color: #084bcc;
 }
 
-.erro {
-    color: red;
+#loginMsg, #cadMsg {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#listaUsuarios {
+    list-style: none;
     margin-top: 10px;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+#listaUsuarios li {
+    padding: 8px;
+    border-bottom: 1px solid #1e2a5a;
+    color: #6fa8ff;
 }
 
-ul li {
-    background: #ecf0f1;
-    margin: 5px 0;
-    padding: 8px;
+.btn-excluir {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #1e2a5a;
+    padding: 5px 10px;
     border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-excluir:hover {
+    background-color: #0a5cff;
+    color: #ffffff;
+}
+
+.btn-sim {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.btn-sim:hover {
+    background-color: darkgreen;
 }
